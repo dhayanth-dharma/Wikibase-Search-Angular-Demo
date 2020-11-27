@@ -1,0 +1,97 @@
+.main-div {
+    padding-top: 2%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.head{
+    position: absolute;
+    top: 7rem;
+    width: 15rem;
+    z-index: 20;
+    height: 17rem;
+}
+.inner-div{
+    background: rgb(237,237,237);
+    background: linear-gradient(90deg, rgba(237,237,237,1) 0%, rgba(219,229,238,1) 28%, rgba(217,232,235,0.8130602582830007) 92%);
+    width: 18rem;
+    height: 32rem;
+    border-radius: 15px;
+    justify-content: center;
+    display: flex;
+}
+.half-div-box{
+    background: rgb(255, 253, 253);
+    width: 17rem;
+    height: 18rem;
+    position: relative; 
+    bottom: -14rem;
+    border-radius: 15px;
+}
+
+.card{
+    position: absolute;
+    top: 12rem;
+    width: 12rem;
+    height: 17rem;
+}
+.bottom-div{
+    position: absolute;
+    top: 30rem;
+    width: 12rem;
+    height: 17rem;
+}
+
+.card-shadow-box {
+    position: absolute;
+	top: 12rem;
+    width: 13rem;
+    height: 17rem;
+	border-radius: 15px;
+	box-shadow: -7px 0 10px rgb(174, 178, 235);
+	transform: rotate(5deg);
+}
+
+p {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.light-text {
+  font-family: Arial Narrow,Arial,sans-serif; 
+  font-size: small;
+}
+.bold-text {
+  font-family: Arial Narrow,Arial,sans-serif; 
+  font-size: 2ch;
+  font-weight: 600;
+}
+.text-div{
+    position: absolute; top: 1.5rem;
+}
+
+.back-button-div{
+    position: absolute; top: -1.5rem;
+}
+
+.back-button-div{
+    border-radius: 10px;
+    width: 2.5rem;
+    height: 2rem;
+    cursor: pointer;
+    background: rgb(245, 239, 239);
+}
+.arrow-div{
+    position: absolute; 
+    left: 1rem;
+    top: 0.1rem;
+}
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.left{
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
