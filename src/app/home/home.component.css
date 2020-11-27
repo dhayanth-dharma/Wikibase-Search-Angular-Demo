@@ -41,6 +41,11 @@
     width: 12rem;
     height: 17rem;
 }
+.black-button{
+    position: absolute; 
+    top: 0.2rem;
+    left: 10rem;
+}
 
 .card-shadow-box {
     position: absolute;
@@ -70,9 +75,6 @@ p {
 
 .back-button-div{
     position: absolute; top: -1.5rem;
-}
-
-.back-button-div{
     border-radius: 10px;
     width: 2.5rem;
     height: 2rem;

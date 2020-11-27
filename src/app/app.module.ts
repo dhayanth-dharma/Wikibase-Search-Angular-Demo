@@ -1,3 +1,4 @@
+import { BlackButtonModule } from './black-button/black-button.module';
 import { DataComponent } from './data/data.component';
 import { SettingComponent } from './setting/setting.component';
 import { AppRoutingModule } from './app.routing.module';
@@ -8,6 +9,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
     RouterModule,
     AppRoutingModule,
     NgbModule,
-    NgbNavModule
+    NgbNavModule,
+    BlackButtonModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
