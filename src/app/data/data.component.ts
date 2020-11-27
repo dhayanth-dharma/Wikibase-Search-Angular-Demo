@@ -1,3 +1,4 @@
+import { FirebaseServiceService } from './../api/firebase-service.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataComponent implements OnInit {
 
-  constructor() { }
+  constructor(private firebaseServiceService: FirebaseServiceService) { }
 
   ngOnInit(): void {
   }
-
+  click() {
+    alert("Hello");
+    this.firebaseServiceService.click();
+  }
 }
