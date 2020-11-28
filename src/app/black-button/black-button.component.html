@@ -1,5 +1,5 @@
-<div class="button-border-div example-boundary">
-    <div class="button-div " cdkDragBoundary=".example-boundary" cdkDrag>
-        <p class="text">Pay</p>
+<div class="button-border-div example-boundary" cdkDrop (click)="stateChange($event)">
+    <div class="button-div " cdkDragBoundary=".example-boundary" cdkDragLockAxis="y" cdkDrag>
+        <p class="text">{{buttonText}}</p>
     </div>
 </div>

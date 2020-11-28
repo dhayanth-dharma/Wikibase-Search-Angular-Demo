@@ -12,6 +12,8 @@ import { BlackButtonModule } from './black-button/black-button.module';
 import { DataComponent } from './data/data.component';
 import { HomeComponent } from './home/home.component';
 import { SettingComponent } from './setting/setting.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,10 @@ import { SettingComponent } from './setting/setting.component';
     BlackButtonModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFirestoreModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

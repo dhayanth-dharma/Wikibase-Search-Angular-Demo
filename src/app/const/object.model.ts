@@ -1,4 +1,4 @@
-export class User {
+export class IWebPage {
     id: string;
     name: string;
     url: string;

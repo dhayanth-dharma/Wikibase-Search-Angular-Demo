@@ -1,18 +1,25 @@
 
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
-import { User } from './../const/object.model';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { IWebPage } from './../const/object.model';
 @Injectable({ providedIn: 'root' })
 export class FirebaseServiceService {
-  constructor(private angularFirestore: AngularFirestore) { }
+  private dbPath = '/savedUrls';
+  webpagesRef: AngularFirestoreCollection<IWebPage> = null;
 
-  click() {
-    console.log("clicked");
+  constructor(private angularFirestore: AngularFirestore) {
+    this.webpagesRef = angularFirestore.collection(this.dbPath);
   }
-  getUser() {
-    return this.angularFirestore.collection('userData').snapshotChanges();
+
+  create(webpage: IWebPage): void {
+    this.webpagesRef.add({ ...webpage });
   }
-  // createUser(user: User) {
-  //   return this.angularFirestore.collection('userData').add(user);
-  // }
+  delete(key: string): Promise<void> {
+    return this.webpagesRef.doc(key).delete();
+  }
+
+  getList(): AngularFirestoreCollection<IWebPage> {
+    return this.webpagesRef;
+  }
+
 }

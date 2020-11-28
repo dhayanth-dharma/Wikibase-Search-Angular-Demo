@@ -1,2 +1,48 @@
-<p>data works!</p>
-<button (click)="click()"></button>
+<form [formGroup]="userForm" class="offset-md-3" style="padding-top: 2rem; padding-bottom: 2rem;">
+    <div class="form-row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="First name" formControlName="name">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="url" formControlName="url">
+        </div>
+        <div class="col">
+            <input type="button" (click)="onSubmit()" class="btn btn-success" value="Submit"
+                [disabled]="!userForm.valid">
+        </div>
+    </div>
+    <div style="width: 20rem;"
+        *ngIf="userForm.controls['name'].invalid && (userForm.controls['name'].dirty || userForm.controls['name'].touched)"
+        class="alert alert-danger">
+        <div *ngIf="userForm.controls['name'].errors.required">
+            Name is required.
+        </div>
+    </div>
+    <div style="width: 20rem;"
+        *ngIf="userForm.controls['url'].invalid && (userForm.controls['url'].dirty || userForm.controls['url'].touched)"
+        class="alert alert-danger">
+        <div *ngIf="userForm.controls['url'].invalid">
+            URL is required, Should be valid url.
+        </div>
+    </div>
+</form>
+
+<table class="table" class="table">
+    <thead>
+        <tr>
+            <th scope="col">NAME</th>
+            <th scope="col">URL</th>
+            <th scope="col">DELETE</th>
+            <th scope="col">NAVIGATE</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let webpage of webpages">
+            <td>{{webpage.name}}</td>
+            <td>{{webpage.url}}</td>
+            <td><button type="button" class="btn btn-danger btn-sm" (click)="deletItem(webpage)">delete</button>
+            </td>
+            <td><a href="#" (click)="onLinkClick(webpage)">open</a></td>
+        </tr>
+    </tbody>
+</table>
