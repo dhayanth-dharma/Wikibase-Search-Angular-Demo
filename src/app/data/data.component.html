@@ -26,7 +26,9 @@
         </div>
     </div>
 </form>
-
+<div *ngIf="loading" class="spinner-grow text-primary offset-md-6" role="status">
+    <span class="sr-only">Loading...</span>
+</div>
 <table class="table" class="table">
     <thead>
         <tr>

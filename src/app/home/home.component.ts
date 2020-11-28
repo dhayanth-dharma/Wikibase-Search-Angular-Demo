@@ -6,13 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  // buttonState
+  state: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
   }
   onPayChange(state: boolean) {
-    debugger;
+    this.state = state;
   }
 
 }

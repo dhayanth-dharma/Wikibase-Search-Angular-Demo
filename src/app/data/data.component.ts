@@ -13,7 +13,7 @@ export class DataComponent implements OnInit {
   userForm: FormGroup;
   private dbPath = '/savedUrls';
   webpages: any;
-
+  loading: boolean = false;
   constructor(private firebaseServiceService: FirebaseServiceService,
     private fb: FormBuilder) {
     const reg = '(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?';
@@ -37,11 +37,21 @@ export class DataComponent implements OnInit {
   }
   //Creating webpages
   onSubmit() {
-    this.firebaseServiceService.create(this.userForm.value as IWebPage);
+    this.loading = true;
+    setTimeout(() => {
+      this.firebaseServiceService.create(this.userForm.value as IWebPage);
+      this.loading = false;
+    }, 3000);
+
   }
   deletItem(item) {
-    this.firebaseServiceService.delete(item.key)
-      .catch(err => console.log(err));
+    this.loading = true;
+    setTimeout(() => {
+      this.firebaseServiceService.delete(item.key)
+        .catch(err => console.log(err));
+      this.loading = false;
+    }, 3000);
+
   }
   onLinkClick(webpage) {
     if (webpage.url.includes("https://")) {
@@ -49,10 +59,5 @@ export class DataComponent implements OnInit {
     } else {
       window.open("https://" + webpage.url, "_blank");
     }
-
-
-
-    // window.open(url, '_blank');
-    // document.location.href = webpage.url;
   }
 }

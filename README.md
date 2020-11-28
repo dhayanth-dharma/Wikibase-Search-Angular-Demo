@@ -1,9 +1,12 @@
 # Ng Demo Application
-
+(DEMO : [click-here](https://5fc2b0981c76594fcb499ef1--musing-roentgen-c96e67.netlify.app/#/home))
 >**Dhayananth Dharmalingam**
+
+
 
 See Also (Other Work) :
 (Github projects : [click-here](https://github.com/dhayanth-dharma)),
+(Github projects : [click-here](https://github.com/ujm-cloud-computing-open/front-app),
 (Video : [click-here](https://www.youtube.com/watch?v=gS8hE2Xa2jM))
 (More : [click-here](https://github.com/Dhaya06))
 
@@ -11,7 +14,7 @@ See Also (Other Work) :
 ## About the Project
 
 This project is developed in order to demostrate the candidate skills on angular and css. application is live hosted in 
-(here: [click-here](https://www.youtube.com/watch?v=gS8hE2Xa2jM))
+(here: [click-here](https://5fc2b0981c76594fcb499ef1--musing-roentgen-c96e67.netlify.app/#/home))
 
 ***NOTE*** : The wiki search may contains some bad implementations of code. it is just integrated to demo the feature of wiki search.  
 
