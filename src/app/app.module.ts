@@ -1,3 +1,7 @@
+import { WikiModule } from './wiki-search/wiki.module';
+import { WikiDataComponent } from './wiki-search/wiki-data/wiki-data.component';
+import { DbpediaComponent } from './wiki-search/dbpedia/dbpedia.component';
+import { SettingHomeComponent } from './wiki-search/home/home.component';
 import { environment } from './../environments/environment';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { NgModule } from '@angular/core';
@@ -20,7 +24,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     AppComponent,
     HomeComponent,
     SettingComponent,
-    DataComponent
+    DataComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     AngularFireDatabaseModule,
     AngularFirestoreModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    WikiModule
   ],
   providers: [],
   bootstrap: [AppComponent]

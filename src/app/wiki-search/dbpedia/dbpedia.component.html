@@ -1,0 +1,61 @@
+<div class="container bg-faded py-3">
+  <div class="row">
+    <div class="col">
+      <div class="mx-auto w-50 p-3  text-black text-center">
+        <span>Use this search box for <code>DB-Pedia</code> search</span>
+
+        <div class="card" style="width:31rem;">
+          <div class="card-header">
+            Search
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <button class="btn btn-outline-secondary" type="button" id="button-addon1"
+                    (click)="searchClickDBP()">Search</button>
+                </div>
+                <input type="text" class="form-control" placeholder="Search Term"
+                  aria-label="Example text with button addon" [(ngModel)]="searchTermDBP" name="search"
+                  aria-describedby="button-addon1">
+
+                <input type="text" class="form-control" placeholder="Search Class"
+                  aria-label="Example text with button addon" [(ngModel)]="searchClassDBP" name="search"
+                  aria-describedby="button-addon1">
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+
+      <table class="table">
+        <tbody>
+          <tr *ngFor="let item of dataItemDBP; let i = index">
+            <th *ngIf="dataItemDBP"> Results {{i}} </th>
+            <td>
+              <accordion>
+                <accordion-group [heading]="item.label">
+                  <p><a [href]="item.uri"> URI : {{item.uri}}</a></p>
+                  <p>{{item.description}}</p>
+                  <!-- <pre>{{item | json}}</pre> -->
+                </accordion-group>
+              </accordion>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+</div>
